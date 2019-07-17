@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose Built Watch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="chooseBuiltWatch" customModule="ARKitHorizontalPlaneDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI4-XS-fYE">
+                                <rect key="frame" x="254" y="350" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="built"/>
+                                <connections>
+                                    <action selector="built" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dy-iI-YrM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKX-kN-LuJ">
+                                <rect key="frame" x="81" y="350" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="watch"/>
+                                <connections>
+                                    <action selector="watch" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4v-gY-VCK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="-768"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nly-5X-qxR">
+            <objects>
+                <viewController storyboardIdentifier="built" id="35T-Yn-oWf" customClass="ViewController" customModule="ARKitHorizontalPlaneDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOd-0H-iPD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuW-dg-qse">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61J-zk-d9o">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="MUN-sX-4yt">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="buR-Ag-1Rm">
+                                            <rect key="frame" x="16" y="7" width="69" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Download"/>
+                                            <connections>
+                                                <action selector="button:" destination="35T-Yn-oWf" eventType="touchUpInside" id="L07-8f-8uU"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="g9r-rD-dR2"/>
+                                    <barButtonItem style="plain" id="wGq-h1-Pna">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gr9-No-3nc">
+                                            <rect key="frame" x="127" y="7" width="64" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="LoadMap"/>
+                                            <connections>
+                                                <action selector="loadBarButtonItemDidTouch:" destination="35T-Yn-oWf" eventType="touchUpInside" id="tXN-F9-Ujk"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="iIi-01-HCb"/>
+                                    <barButtonItem style="plain" id="DUx-V5-ofk">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Sf-r0-z3g">
+                                            <rect key="frame" x="233" y="0.0" width="63" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="SaveMap"/>
+                                            <connections>
+                                                <action selector="saveBarButtonItemDidTouch:" destination="35T-Yn-oWf" eventType="touchUpInside" id="pmb-2X-lRo"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="PwR-D2-9bZ"/>
+                                    <barButtonItem style="plain" id="MXr-Vk-EdM">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tfb-C2-4Ky">
+                                            <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="List"/>
+                                            <connections>
+                                                <action selector="button_choose:" destination="35T-Yn-oWf" eventType="touchUpInside" id="fSe-AE-OGn"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Move camera around to detect planes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3U-jj-H4K">
+                                <rect key="frame" x="0.0" y="552" width="375" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r80-vH-fu2">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="Rtp-lT-TZ4">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="resetBarButtonItemDidTouch:" destination="35T-Yn-oWf" id="tAt-Md-Hiz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zuW-dg-qse" secondAttribute="trailing" id="5T6-Bk-4kP"/>
+                            <constraint firstItem="zuW-dg-qse" firstAttribute="leading" secondItem="XOd-0H-iPD" secondAttribute="leading" id="l9S-1N-jK9"/>
+                            <constraint firstAttribute="bottom" secondItem="zuW-dg-qse" secondAttribute="bottom" id="sRI-iH-3v1"/>
+                            <constraint firstItem="zuW-dg-qse" firstAttribute="top" secondItem="XOd-0H-iPD" secondAttribute="top" id="z0D-0e-e5K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mno-7W-pR3"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="label" destination="A3U-jj-H4K" id="A2t-FK-KaL"/>
+                        <outlet property="sceneView" destination="zuW-dg-qse" id="m4s-I9-ltd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMd-oy-yFP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="-50"/>
+        </scene>
+        <!--For WatchUI-->
+        <scene sceneID="PSC-c0-4pc">
+            <objects>
+                <viewController storyboardIdentifier="watch" id="EKQ-ZD-lSh" customClass="ForWatchUI" customModule="ARKitHorizontalPlaneDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbM-uv-NcS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDK-6Y-Rbu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWQ-YG-tuA">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="6f7-Fy-en6"/>
+                                    <barButtonItem style="plain" id="Qum-QH-ura">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ubw-r2-YeA">
+                                            <rect key="frame" x="58" y="7" width="64" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="LoadMap"/>
+                                            <connections>
+                                                <action selector="loadBarButtonItemDidTouch:" destination="EKQ-ZD-lSh" eventType="touchUpInside" id="c0L-ni-bpC"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZEC-ep-SK3"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="LAZ-bM-sru"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Move camera around to detect planes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unp-eH-LJv">
+                                <rect key="frame" x="0.0" y="552" width="375" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiD-7x-0SK">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="7uc-vH-b3h">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="resetBarButtonItemDidTouch:" destination="EKQ-ZD-lSh" id="Xjc-VX-Xyc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WDK-6Y-Rbu" secondAttribute="bottom" id="IbD-oC-OuU"/>
+                            <constraint firstItem="WDK-6Y-Rbu" firstAttribute="leading" secondItem="zbM-uv-NcS" secondAttribute="leading" id="RpM-0h-WzM"/>
+                            <constraint firstItem="WDK-6Y-Rbu" firstAttribute="top" secondItem="zbM-uv-NcS" secondAttribute="top" id="S9k-9U-Pcm"/>
+                            <constraint firstAttribute="trailing" secondItem="WDK-6Y-Rbu" secondAttribute="trailing" id="fiD-ml-gKM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KMK-O2-HN6"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="label" destination="unp-eH-LJv" id="uTJ-HM-w0L"/>
+                        <outlet property="sceneView" destination="WDK-6Y-Rbu" id="inT-sf-nff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xa-UC-TwR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-51"/>
+        </scene>
+    </scenes>
+</document>
